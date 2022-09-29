@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -26,18 +27,112 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "import/no-anonymous-default-export": "off",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "react/jsx-boolean-value": [
+        "error",
+        "never"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "array-bracket-spacing": [
+        "error",
+        "never"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "jsx-quotes": [
+        "error",
+        "prefer-double"
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1,
+          "maxEOF": 0
+        }
+      ],
+      "eol-last": [
+        "error",
+        "always"
+      ],
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "max-len": [
+        "error",
+        {
+          "code": 120
+        }
+      ],
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          "ignoreRestSiblings": true
+        }
+      ],
+      "no-unused-vars": [
+        "warn",
+        {
+          "ignoreRestSiblings": true
+        }
+      ],
+      "no-extra-boolean-cast": "off",
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "type",
+            [
+              "parent",
+              "sibling"
+            ],
+            "index"
+          ],
+          "newlines-between": "always",
+          "warnOnUnassignedImports": true
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 10"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.11",
+    "postcss": "^8.2.4",
+    "sass": "^1.55.0",
+    "sass-loader": "^10",
+    "node-sass": "4.14.1"
   }
 }

@@ -1,0 +1,13 @@
+.ScrollButton {
+  all: unset;
+  width: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+  text-align: center;
+  
+  &_disabled {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+  }
+}
