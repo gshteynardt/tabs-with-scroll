@@ -11,7 +11,7 @@ const useTabs = () => {
   });
 
   const showStartScroll = scrollLeft > 0;
-  const showEndScroll = scrollLeft + clientWidth < scrollWidth && scrollLeft >= 0;
+  const showEndScroll = scrollLeft < scrollWidth - clientWidth -1 && scrollLeft >= 0;
 
   const updateElemSize = useCallback(() => {
     if (!tabListRef.current) return;
