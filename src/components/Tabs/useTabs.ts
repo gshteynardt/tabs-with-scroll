@@ -58,12 +58,14 @@ const useTabs = () => {
 
   const handleStartScrollClick = () => {
     moveTabsScroll(-1 * getScrollSize());
-    updateElemSize();
+
+    setTimeout(updateElemSize, 500);
   };
 
   const handleEndScrollClick = () => {
     moveTabsScroll(getScrollSize());
-    updateElemSize();
+
+    setTimeout(updateElemSize, 500);
   };
 
   return {
